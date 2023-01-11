@@ -16,10 +16,10 @@ with open(path) as csv_file:
     
         data = [float(i) for i in data]                                                                                        
     
-        combinations = list(itertools.combinations(data,5)) 
+        combinations = list(itertools.combinations(data,6)) 
         avg_list = []
         for x in combinations:
-            avg_list.append(sum(x)/5)
+            avg_list.append(sum(x)/6)
     
         print(closest_value(avg_list, avg))
         print(combinations[avg_list.index(closest_value(avg_list, avg))])
